@@ -1,0 +1,23 @@
+package exercise;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CharList {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("请输入字符串： ");
+		String s = input.nextLine();
+		ArrayList list = toCharacterArray(s);
+		System.out.println("字符串数组为 " + list.toString());
+	}
+
+	public static ArrayList<Character> toCharacterArray(String s){
+		char [] charList = s.toCharArray();
+		ArrayList <Character> list = new ArrayList<>();
+		for(int i = 0 ; i < charList.length ; i++) {
+			list.add(charList[i]);
+		}
+		return list;
+	}
+}
